@@ -20043,7 +20043,7 @@ static void APP_ZIGBEE_NwkForm(void)
     else
     {
       APP_DBG("Startup failed, attempting again after a short delay (%d ms)", APP_ZIGBEE_STARTUP_FAIL_DELAY);
- 8009064:	f44f 73fa 	mov.w	r3, #500	@ 0x1f4
+ 8009064:	f44f 7396 	mov.w	r3, #300	@ 0x12c
  8009068:	4a1b      	ldr	r2, [pc, #108]	@ (80090d8 <APP_ZIGBEE_NwkForm+0x15c>)
  800906a:	2101      	movs	r1, #1
  800906c:	2000      	movs	r0, #0
@@ -20051,7 +20051,7 @@ static void APP_ZIGBEE_NwkForm(void)
       zigbee_app_info.join_delay = HAL_GetTick() + APP_ZIGBEE_STARTUP_FAIL_DELAY;
  8009072:	f001 f89f 	bl	800a1b4 <HAL_GetTick>
  8009076:	4603      	mov	r3, r0
- 8009078:	f503 73fa 	add.w	r3, r3, #500	@ 0x1f4
+ 8009078:	f503 7396 	add.w	r3, r3, #300	@ 0x12c
  800907c:	4a10      	ldr	r2, [pc, #64]	@ (80090c0 <APP_ZIGBEE_NwkForm+0x144>)
  800907e:	60d3      	str	r3, [r2, #12]
       /* USER CODE END 1 */
